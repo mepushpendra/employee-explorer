@@ -37,7 +37,6 @@ class EmployeeOverview extends Component {
             .then(response => response.json())
             .then(data => {
                 if (data[1]) {
-                    console.log("Direct reportee for " + name, data[1]);
                     let directReportee = data[1]['direct-subordinates'];
                     directReportee.forEach(el => {
                         let alreadyExist = this.state.subOrdinates.find(sub => sub.name === el);
